@@ -19,3 +19,15 @@ console.log(typeof valueInNumber)//number
 let isLoggedIn =1 //"" is false with "name" is true
 let booleanIsLoggedIn= Boolean(isLoggedIn)
 console.log(booleanIsLoggedIn)
+
+
+let str1="hello"
+let str2=" puja"
+let str3= str1 + str2
+console.log(str3) //hello puja
+
+console.log("1" + 2); //12
+console.log(1 + "2"); //12
+console.log("1" + 2 + 2); //122
+console.log(1 + 2 +"3");//33
+console.log((3+2)*(3-2)*5) //25

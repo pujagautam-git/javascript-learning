@@ -18,3 +18,8 @@ alert(3+
 
   console.log(typeof age);
   console.log(typeof null) //is object
+
+
+  //primitive datatype are 7 symbol, number, boolean,string,null,undefined,bigint
+
+  //nonprimitive or reference are 3 array, function, object
