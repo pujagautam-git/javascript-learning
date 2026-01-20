@@ -23,3 +23,7 @@ alert(3+
   //primitive datatype are 7 symbol, number, boolean,string,null,undefined,bigint
 
   //nonprimitive or reference are 3 array, function, object
+
+  //+++++++++++++++++++++++++++++++++++++++++++
+
+  //memory stack (primitive), heap(non-primitive)
