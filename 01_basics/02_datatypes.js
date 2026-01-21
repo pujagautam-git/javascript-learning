@@ -1,7 +1,7 @@
 "use strict" // treat all js code as newer version
 
-alert(3+
-    3) // code readability should be high 
+// alert(3+
+    // 3) // code readability should be high 
     console.log("puja")
 
     let name= "puja"
@@ -27,3 +27,21 @@ alert(3+
   //+++++++++++++++++++++++++++++++++++++++++++
 
   //memory stack (primitive), heap(non-primitive)
+
+  let myYoutubename ="hellodotcom"
+
+  let anothername = myYoutubename
+  anothername = "teaandcode"
+
+  console.log(myYoutubename);
+  console.log(anothername); //for stack it will change value and give old value also
+
+  let userOne ={
+    email:"user@google.com",
+    upi:"user@ybl"
+
+  }
+let userTwo = userOne
+userTwo.email="puja@google.com"
+console.log(userTwo)
+console.log(userOne) //for heap it will chnage to new value totally and doexnot give backup old value 
