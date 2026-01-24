@@ -70,9 +70,9 @@ console.log(courseInstructor) //hitesh or alternative as
 const {courseInstructor:instructor} =course
 console.log(instructor) //same answer just give short cut name for courseinstructor to instructor
 
-//++++++++++++++json object structure for api +++++++++++++++//
+//++++++++++++++json format object structure for api +++++++++++++++//
 {
     "name": "hari",
     "address":"brt",
     "price": "free" 
-}
+} //sometimes it might comes on array of object format for json 
