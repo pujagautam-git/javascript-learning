@@ -64,3 +64,26 @@ function CalculateCartPrice (val1,val2, ...num1){
     return num1
 }
 console.log(CalculateCartPrice(200,300,400,500,2000))//num will be 400,500,2000 and value will be 200,300
+
+////++++++++++++++ from object to function ++++++++++++++///
+const user = {
+    username:"puja",
+    price:199
+}
+function handleObject(anyobject) {
+console.log(`username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+ handleObject(user)//  username is puja and price is 199
+ handleObject({
+    username:"sam",
+    price:20
+ }) //now change to "username is sam and price is 20" we can pass value directly also 
+
+ //++++++++++++++++++++++ array to function ++++++++++++++//
+ const arrayValue=[200,400,500,600]
+
+ function arraynext(getarray){
+    return getarray[1]
+ }
+ console.log(arraynext(arrayValue));//on console first function to array 
+ console.log(arraynext([200,300,100,500]));//on console first function to array even if we chnage the value also
