@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color:black;color: aliceblue;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+    
+</body>
+<script>
+    //value add
+    function addLanguage(langName){ //function with name pass(langName)
+       const li= document.createElement("li"); //create element for list item
+       li.innerHTML =`${langName}`//add html with parameter
+       document.querySelector('.language').appendChild(li)//to attached langauge inside 
+    }
+
+    addLanguage("python")//to run method 
+    addLanguage("vue")
+
+
+    //alternative optimise approch 
+     function addoptiLanguage(langName){ //function with name pass(langName)
+       const li= document.createElement("li"); //create element for list item
+     li.appendChild(doument.createTextNode(langName))
+       document.querySelector('.language').appendChild(li)//to attached langauge inside 
+    }
+
+   
+    addLanguage("agular")
+
+    //value edit
+    const secondLang=document.querySelector("li:nth-child(2)")
+  //secondLang.innerHTML="Mojo"//this is not wrong but other alternative also good
+const newli= document.createElement('li')
+newli.textContent="Mojo"
+secondLang.replaceWith(newli)//make first const function and the put text as "textcontent" and on next const functionname.replacewith
+
+
+//2nd edit method
+const firstLang=document.querySelector('li:first-child')
+firstLang.outerHTML='<li>React</li>'
+
+
+//remove value
+const lastLang=document.querySelector('li:last-child')
+lastLang.remove()
+
+</script>
+</html>

@@ -5,7 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
+<body style="background-color: #212121; color:#fff">
+<script>
+const div=document.createElement('div')
+console.log(div)
+div.className="main"
+div.id="myid"
+
+div.setAttribute("title","generated title")
+// div.innerText="Chai aur code"
+const addtext=document.createTextNode("chai aur code")
+div.appendChild(addtext) //to show on console
+
+document.body.appendChild(div) //toshow on page
+</script>
 </body>
 </html>
