@@ -61,3 +61,15 @@ results.innerHTML=`<span>${bmi}</span>`
 
 })
 ```
+## project 3 digital clock display  solution
+```javascript 
+const clock=document.querySelector('#clock')
+
+
+setInterval(function(){
+  let date = new Date();
+  // console.log(date.toLocaleTimeString());
+  clock.innerHTML = date.toLocaleTimeString();
+},1000);//from what time period do we need to display
+
+```
