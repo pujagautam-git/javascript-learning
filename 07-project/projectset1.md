@@ -73,3 +73,62 @@ setInterval(function(){
 },1000);//from what time period do we need to display
 
 ```
+
+## project 4 guess the random number solution
+```javascript
+const randomnumber = parseInt(Math.random()*100 + 1);
+const submitbutton = document.getElementById('Subt')
+const userInput = document.getElementById('guessField')
+const guessSlot = document.getElementsByClassName('guesses')
+const remaining = document.getElementsByClassName('lastResult')
+const lowhigh = document.getElementsByClassName('lowOrHi')
+const startOver = document.getElementsByClassName('resultParas')
+
+
+const p = document.createElement('p')
+
+let prevGuess = []// aaray having submit value store so that user do not have to guess same number again
+let numGuess = 1  // it should be start from 1 to 10
+
+let playGame = true //after event or coins finish we can continue
+if(playGame){
+  submit.addEventListener('click', function(e){
+    e.preventDefault();
+    const guess= parseInt(userInput.value);
+    validateGuess(guess)
+  })
+}
+
+function validateGuess(guess) { //to see if valid number is guess or not if i give a,b,c,d than or i give 500 than  what will happend
+
+  if(isNaN(guess)){
+    alert("Please enter a valid number")
+  } else if(guess <1){
+    alert("Please enter a  number more than 1")
+} else if(guess > 100){
+  alert("Please enter a  number less than 100")
+} else{
+  prevGuess.push(guess)
+  if(numGuess === 11){
+    displayGuess(guess)
+    displayMessage(`Game over`)
+    endGame()
+  }
+}
+  }
+
+  function checkGuess(guess){//message print 
+
+  }
+  function displayMessage(message){
+
+  }
+
+  function newGame(){
+  }
+
+  function endGame(){
+  }
+
+
+```
