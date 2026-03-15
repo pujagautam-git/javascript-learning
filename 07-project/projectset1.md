@@ -76,7 +76,7 @@ setInterval(function(){
 
 ## project 4 guess the random number solution
 ```javascript
-const randomnumber = parseInt(Math.random()*100 + 1);
+let randomnumber = parseInt(Math.random()*100 + 1);
 const submitbutton = document.getElementById('Subt')
 const userInput = document.getElementById('guessField')
 const guessSlot = document.getElementsByClassName('guesses')
@@ -111,23 +111,56 @@ function validateGuess(guess) { //to see if valid number is guess or not if i gi
   prevGuess.push(guess)
   if(numGuess === 11){
     displayGuess(guess)
-    displayMessage(`Game over`)
+    displayMessage(`Game over. Random number was ${randomnumber}`)
     endGame()
+  }else {
+    displayGuess(guess)
+    checkGuess(guess)
   }
 }
   }
 
   function checkGuess(guess){//message print 
-
+    if(guess === randomnumber){
+      displayMessage(`you guess it right`)
+      endGame()
+    }else if(guess > randomnumber){
+    displayMessage(`Number is 1000 high`)
+    }
   }
+function displayGuess(guess){
+  userInput.value = ''
+guessSlot.innerHTML += `${guess}   `
+   numGuess++;
+  remaining.innerHTML =`${10 - numGuess}`
+  }
+
   function displayMessage(message){
-
-  }
-
-  function newGame(){
+lowOrHi.innerHTML = `<h2>${message}</h2>`
   }
 
   function endGame(){
+    userInput.value=''
+    userInput.setAttribute('disabled', '')
+    p.classList.add('button')
+    p.innerHTML=`<h2 id="newGame">Start  new game </h2>`
+    startOver.appendChild(p)
+    playGame=false;
+    newGame()
+  }
+
+  function newGame(){
+    document.querySelector('#newGame')
+    newGameButton.addEventListener('click', function(e){
+      randomnumber = parseInt(Math.random()*100 + 1);
+      prevGuess=[]
+      numGuess=1
+      guessSlot.innerHTML = ''
+      remaining.innerHTML = `${11 - numGuess}`;
+      userInput.removeAttribute('disabled')
+      startOver.removeChild(p)
+      playGame=true
+    })
   }
 
 
